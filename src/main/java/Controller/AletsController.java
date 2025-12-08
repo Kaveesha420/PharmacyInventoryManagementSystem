@@ -1,11 +1,18 @@
 package Controller;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class AletsController {
+
+    Stage stage = new Stage();
 
     @FXML
     private TableColumn<?, ?> colBrandName;
@@ -40,12 +47,24 @@ public class AletsController {
 
     @FXML
     void OnDashbord(MouseEvent event) {
-
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/View/DashboardForm.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage.setTitle("Dashboard");
+        stage.show();
     }
 
     @FXML
     void OnMedicine(MouseEvent event) {
-
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/View/MedicineForm.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage.setTitle("Medicine");
+        stage.show();
     }
 
     @FXML
