@@ -10,15 +10,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="663.0" prefWidth="865.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MedicineFormController">
+<AnchorPane prefHeight="768.0" prefWidth="1101.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MedicineFormController">
    <children>
-      <ImageView fitHeight="663.0" fitWidth="937.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="787.0" fitWidth="1104.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Img/Screenshot%202025-12-08%20123030.png" />
          </image>
       </ImageView>
-      <JFXButton layoutX="761.0" layoutY="98.0" onAction="#OnAddNewDrug" prefHeight="31.0" prefWidth="146.0" style="-fx-background-color: Green;" text="Add New Drug" textFill="WHITE">
+      <JFXButton layoutX="929.0" layoutY="126.0" onAction="#OnAddNewDrug" prefHeight="31.0" prefWidth="146.0" style="-fx-background-color: Green;" text="Add New Drug" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -48,16 +47,16 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <TableView fx:id="tblMedicine" layoutX="22.0" layoutY="232.0" prefHeight="298.0" prefWidth="885.0">
+      <TableView fx:id="tblMedicine" layoutX="27.0" layoutY="275.0" prefHeight="344.0" prefWidth="1049.0">
         <columns>
-          <TableColumn fx:id="colBrandName" prefWidth="155.20001602172852" text="BRAND NAME" />
-          <TableColumn fx:id="colGenaricName" prefWidth="169.59996032714844" text="GENERIC NAME" />
-            <TableColumn fx:id="colDosage" prefWidth="125.5999755859375" text="DOSAGE" />
-            <TableColumn fx:id="colExpireDate" prefWidth="182.39996337890625" text="EXPIRE DATE" />
-            <TableColumn fx:id="colCurrentStock" prefWidth="137.5999755859375" text="CURRENT STOCK" />
-            <TableColumn fx:id="colUnitPrice" prefWidth="120.800048828125" text="UNIT PRICE" />
+          <TableColumn fx:id="colBrandName" prefWidth="185.59997177124023" text="BRAND NAME" />
+          <TableColumn fx:id="colGenaricName" prefWidth="180.80003356933594" text="GENERIC NAME" />
+            <TableColumn fx:id="colDosage" prefWidth="162.39996337890625" text="DOSAGE" />
+            <TableColumn fx:id="colExpireDate" prefWidth="191.20001220703125" text="EXPIRE DATE" />
+            <TableColumn fx:id="colCurrentStock" prefWidth="172.00006103515625" text="CURRENT STOCK" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="158.39996337890625" text="UNIT PRICE" />
         </columns>
       </TableView>
-      <JFXTextField fx:id="txtSearch" layoutX="146.0" layoutY="173.0" onKeyPressed="#OnSearchDrug" prefHeight="26.0" prefWidth="468.0" promptText="Search by Brand Name or Generic Name . . ." />
+      <JFXTextField fx:id="txtSearch" layoutX="58.0" layoutY="192.0" onKeyPressed="#OnSearchDrug" prefHeight="38.0" prefWidth="511.0" promptText="Search by Brand Name or Generic Name . . ." />
    </children>
 </AnchorPane>

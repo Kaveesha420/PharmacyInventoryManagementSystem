@@ -48,7 +48,13 @@ public class MedicineFormController {
 
     @FXML
     void OnAlerts(MouseEvent event) {
-
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/View/AletsForm.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage.setTitle("Alets");
+        stage.show();
     }
 
     @FXML
