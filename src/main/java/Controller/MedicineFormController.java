@@ -85,7 +85,12 @@ public class MedicineFormController {
 
     @FXML
     void OnSuppliers(MouseEvent event) {
-
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/View/SupplierForm.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage.setTitle("Suppliers");
+        stage.show();
     }
-
 }

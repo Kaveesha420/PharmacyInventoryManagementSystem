@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="754.0" prefWidth="1034.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SupplierController">
+   <children>
+      <ImageView fitHeight="745.0" fitWidth="1205.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Img/Screenshot%202025-12-08%20201030.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="209.0" layoutY="30.0" onMouseClicked="#OnDashbord" prefHeight="19.0" prefWidth="73.0" text="Dashboard" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="316.0" layoutY="30.0" onMouseClicked="#OnMedicine" prefHeight="19.0" prefWidth="73.0" text="Medicine" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="415.0" layoutY="30.0" onMouseClicked="#OnAlerts" prefHeight="19.0" prefWidth="73.0" text="Alerts" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="506.0" layoutY="30.0" onMouseClicked="#OnSuppliers" prefHeight="19.0" prefWidth="73.0" text="Suppliers" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="615.0" layoutY="30.0" onMouseClicked="#OnBilling" prefHeight="19.0" prefWidth="73.0" text="Billing" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblSupplier" layoutX="29.0" layoutY="191.0" prefHeight="470.0" prefWidth="986.0">
+        <columns>
+          <TableColumn fx:id="colSupplierId" prefWidth="149.60003662109375" text="SUPPLIER ID" />
+          <TableColumn fx:id="colCompanyName" prefWidth="151.199951171875" text="COMPANY NAME" />
+            <TableColumn fx:id="colContactPerson" prefWidth="174.39996337890625" text="CONTACT PERSON" />
+            <TableColumn fx:id="colPhone" prefWidth="179.99996948242188" text="PHONE" />
+            <TableColumn fx:id="colEmail" prefWidth="152.800048828125" text="E-MAIL" />
+            <TableColumn fx:id="colAddress" prefWidth="179.20001220703125" text="ADDRESS" />
+        </columns>
+      </TableView>
+      <JFXButton layoutX="868.0" layoutY="116.0" onAction="#OnAddNewSupplier" prefHeight="31.0" prefWidth="146.0" style="-fx-background-color: Green;" text="Add New Supplier" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
