@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="751.0" prefWidth="1013.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AletsController">
+   <children>
+      <ImageView fitHeight="783.0" fitWidth="1069.0" layoutX="-4.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Img/Screenshot%202025-12-08%20190718.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="202.0" layoutY="25.0" onMouseClicked="#OnDashbord" prefHeight="19.0" prefWidth="73.0" text="Dashboard" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="304.0" layoutY="25.0" onMouseClicked="#OnMedicine" prefHeight="19.0" prefWidth="73.0" text="Medicine" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="410.0" layoutY="25.0" onMouseClicked="#OnAlerts" prefHeight="19.0" prefWidth="73.0" text="Alerts" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="495.0" layoutY="25.0" onMouseClicked="#OnSuppliers" prefHeight="19.0" prefWidth="73.0" text="Suppliers" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="597.0" layoutY="25.0" onMouseClicked="#OnBilling" prefHeight="19.0" prefWidth="73.0" text="Billing" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblMedicine" layoutX="21.0" layoutY="220.0" prefHeight="425.0" prefWidth="1016.0">
+         <columns>
+            <TableColumn fx:id="colBrandName" prefWidth="163.99999618530273" text="BRAND NAME" />
+            <TableColumn fx:id="colGenaricName" prefWidth="203.1999969482422" text="GENERIC NAME" />
+            <TableColumn fx:id="colDosage" prefWidth="162.39996337890625" text="DOSAGE" />
+            <TableColumn fx:id="colExpireDate" prefWidth="191.20001220703125" text="EXPIRE DATE" />
+            <TableColumn fx:id="colCurrentStock" prefWidth="142.39996337890625" text="QUANTITY" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="151.20001220703125" text="DAYS REMAINING" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
