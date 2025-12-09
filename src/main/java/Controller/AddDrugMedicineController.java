@@ -1,5 +1,6 @@
 package Controller;
 
+import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -7,15 +8,26 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class MedicineFormController {
+public class AddDrugMedicineController {
 
     Stage stage = new Stage();
+
+    @FXML
+    private JFXButton btnAdd;
+
+    @FXML
+    private JFXButton btnClear;
+
+    @FXML
+    private JFXButton btnDelete;
+
+    @FXML
+    private JFXButton btnUpdate;
 
     @FXML
     private TableColumn<?, ?> colBrandName;
@@ -39,18 +51,44 @@ public class MedicineFormController {
     private TableView<?> tblMedicine;
 
     @FXML
-    private JFXTextField txtSearch;
+    private JFXTextField txtBrandName;
 
     @FXML
-    void OnAddNewDrug(ActionEvent event) {
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/View/AddDrugMedicine.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage.setTitle("AddNewDrug");
-        stage.show();
+    private JFXTextField txtCurrentStock;
+
+    @FXML
+    private JFXTextField txtDosage;
+
+    @FXML
+    private JFXTextField txtExpireDate;
+
+    @FXML
+    private JFXTextField txtGenaricName;
+
+    @FXML
+    private JFXTextField txtUnitPrice;
+
+    @FXML
+    void OnAdd(ActionEvent event) {
+
     }
+
+    @FXML
+    void OnUpdate(ActionEvent event) {
+
+    }
+
+    @FXML
+    void OnDelete(ActionEvent event) {
+
+    }
+
+    @FXML
+    void OnClear(ActionEvent event) {
+
+    }
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////
 
     @FXML
     void OnAlerts(MouseEvent event) {
@@ -76,17 +114,18 @@ public class MedicineFormController {
             throw new RuntimeException(e);
         }
         stage.setTitle("Dashboard");
-         stage.show();
+        stage.show();
     }
 
     @FXML
     void OnMedicine(MouseEvent event) {
-
-    }
-
-    @FXML
-    void OnSearchDrug(KeyEvent event) {
-
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/View/MedicineForm.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage.setTitle("Medicine");
+        stage.show();
     }
 
     @FXML
@@ -99,4 +138,7 @@ public class MedicineFormController {
         stage.setTitle("Suppliers");
         stage.show();
     }
+
+
+
 }
