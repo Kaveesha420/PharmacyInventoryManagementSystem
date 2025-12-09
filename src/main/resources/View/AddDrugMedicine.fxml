@@ -1,14 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="Controller.AddDrugMedicineController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="752.0" prefWidth="1065.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AddDrugMedicineController">
+   <children>
+      <ImageView fitHeight="759.0" fitWidth="1182.0" layoutX="2.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Img/Screenshot%202025-12-09%20141724.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="214.0" layoutY="25.0" onMouseClicked="#OnDashbord" prefHeight="19.0" prefWidth="73.0" text="Dashboard" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="321.0" layoutY="25.0" onMouseClicked="#OnMedicine" prefHeight="19.0" prefWidth="73.0" text="Medicine" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="420.0" layoutY="25.0" onMouseClicked="#OnAlerts" prefHeight="19.0" prefWidth="73.0" text="Alerts" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="511.0" layoutY="25.0" onMouseClicked="#OnSuppliers" prefHeight="19.0" prefWidth="73.0" text="Suppliers" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="620.0" layoutY="25.0" onMouseClicked="#OnBilling" prefHeight="19.0" prefWidth="73.0" text="Billing" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblMedicine" layoutX="28.0" layoutY="357.0" prefHeight="367.0" prefWidth="1018.0">
+         <columns>
+            <TableColumn fx:id="colBrandName" prefWidth="185.59997177124023" text="BRAND NAME" />
+            <TableColumn fx:id="colGenaricName" prefWidth="180.80003356933594" text="GENERIC NAME" />
+            <TableColumn fx:id="colDosage" prefWidth="162.39996337890625" text="DOSAGE" />
+            <TableColumn fx:id="colExpireDate" prefWidth="216.79998779296875" text="EXPIRE DATE" />
+            <TableColumn fx:id="colCurrentStock" prefWidth="150.40008544921875" text="CURRENT STOCK" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="120.00003662109373" text="UNIT PRICE" />
+         </columns>
+      </TableView>
+      <JFXTextField fx:id="txtBrandName" layoutX="129.0" layoutY="195.0" prefHeight="26.0" prefWidth="192.0" promptText="BRAND NAME" />
+      <JFXTextField fx:id="txtGenaricName" layoutX="452.0" layoutY="195.0" prefHeight="26.0" prefWidth="192.0" promptText="GENERIC NAME" />
+      <JFXTextField fx:id="txtDosage" layoutX="768.0" layoutY="195.0" prefHeight="26.0" prefWidth="192.0" promptText="DOSAGE" />
+      <JFXTextField fx:id="txtExpireDate" layoutX="129.0" layoutY="239.0" prefHeight="26.0" prefWidth="192.0" promptText="EXPIRE DATE" />
+      <JFXTextField fx:id="txtCurrentStock" layoutX="452.0" layoutY="239.0" prefHeight="26.0" prefWidth="192.0" promptText="CURRENT STOCK" />
+      <JFXTextField fx:id="txtUnitPrice" layoutX="768.0" layoutY="239.0" prefHeight="26.0" prefWidth="192.0" promptText="UNIT PRICE" />
+      <JFXButton fx:id="btnAdd" layoutX="144.0" layoutY="281.0" onAction="#OnAdd" prefHeight="35.0" prefWidth="95.0" style="-fx-background-color: Green;" text="ADD" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdate" layoutX="372.0" layoutY="281.0" onAction="#OnUpdate" prefHeight="35.0" prefWidth="95.0" style="-fx-background-color: Green;" text="UPDATE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" layoutX="609.0" layoutY="281.0" onAction="#OnDelete" prefHeight="35.0" prefWidth="95.0" style="-fx-background-color: Green;" text="DELETE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnClear" layoutX="864.0" layoutY="281.0" onAction="#OnClear" prefHeight="35.0" prefWidth="95.0" style="-fx-background-color: Green;" text="CLEAR" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
 </AnchorPane>
