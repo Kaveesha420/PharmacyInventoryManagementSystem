@@ -7,7 +7,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class Medicine {
+public class MedicineDto {
     private String brandName;
     private String genaricsName;
     private String dosage;

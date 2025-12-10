@@ -49,12 +49,13 @@
       </Label>
       <TableView fx:id="tblMedicine" layoutX="27.0" layoutY="275.0" prefHeight="344.0" prefWidth="1049.0">
         <columns>
-          <TableColumn fx:id="colBrandName" prefWidth="185.59997177124023" text="BRAND NAME" />
-          <TableColumn fx:id="colGenaricName" prefWidth="180.80003356933594" text="GENERIC NAME" />
-            <TableColumn fx:id="colDosage" prefWidth="162.39996337890625" text="DOSAGE" />
-            <TableColumn fx:id="colExpireDate" prefWidth="191.20001220703125" text="EXPIRE DATE" />
-            <TableColumn fx:id="colCurrentStock" prefWidth="172.00006103515625" text="CURRENT STOCK" />
-            <TableColumn fx:id="colUnitPrice" prefWidth="158.39996337890625" text="UNIT PRICE" />
+          <TableColumn fx:id="colId" prefWidth="88.79998397827148" text="ID" />
+          <TableColumn fx:id="colBrandName" prefWidth="222.39999389648438" text="BRAND NAME" />
+            <TableColumn fx:id="colGenaricName" prefWidth="217.5999755859375" text="GENERIC NAME" />
+            <TableColumn fx:id="colDosage" prefWidth="125.60003662109375" text="DOSAGE" />
+            <TableColumn fx:id="colExpireDate" prefWidth="152.79998779296875" text="EXPIRE DATE" />
+            <TableColumn fx:id="colCurrentStock" prefWidth="121.5999755859375" text="CURRENT STOCK" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="126.39996337890625" text="UNIT PRICE" />
         </columns>
       </TableView>
       <JFXTextField fx:id="txtSearch" layoutX="58.0" layoutY="192.0" onKeyPressed="#OnSearchDrug" prefHeight="38.0" prefWidth="511.0" promptText="Search by Brand Name or Generic Name . . ." />
