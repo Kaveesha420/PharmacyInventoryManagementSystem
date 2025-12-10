@@ -139,6 +139,4 @@ public class AddDrugMedicineController {
         stage.show();
     }
 
-
-
 }
