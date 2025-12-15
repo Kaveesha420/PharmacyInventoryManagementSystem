@@ -6,6 +6,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.*;
 
+import java.sql.Date;
+
 @Getter
 @Setter
 @AllArgsConstructor
@@ -20,7 +22,7 @@ public class Medicine {
     private String brandName;
     private String genaricsName;
     private String dosage;
-    private String expireDate;
+    private Date expireDate;
     private int currentStock;
     private double unitPrice;
 }
