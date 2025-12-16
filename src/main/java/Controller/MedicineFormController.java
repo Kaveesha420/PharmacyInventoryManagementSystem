@@ -74,9 +74,9 @@ public class MedicineFormController implements Initializable {
     @FXML
     void OnAddNewDrug(ActionEvent event) {
         try {
-            Stage stage = (Stage) tblMedicine.getScene().getWindow();
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/View/AddDrugMedicine.fxml"))));
-            stage.setTitle("Add New Drug");
+            Stage stages = (Stage) tblMedicine.getScene().getWindow();
+            stages.setScene(new Scene(FXMLLoader.load(getClass().getResource("/View/AddDrugMedicine.fxml"))));
+            stages.setTitle("Add New Drug");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -113,9 +113,9 @@ public class MedicineFormController implements Initializable {
     }
 
     private void navigate(String fxmlPath, String title) throws IOException {
-        Stage stage = (Stage) tblMedicine.getScene().getWindow();
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource(fxmlPath))));
-        stage.setTitle(title);
-        stage.show();
+        Stage stages = (Stage) tblMedicine.getScene().getWindow();
+        stages.setScene(new Scene(FXMLLoader.load(getClass().getResource(fxmlPath))));
+        stages.setTitle(title);
+        stages.show();
     }
 }

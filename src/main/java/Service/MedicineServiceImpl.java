@@ -81,4 +81,9 @@ public class MedicineServiceImpl implements MedicineService{
             return "M1";
         }
     }
+    @Override
+    public ObservableList<Medicine> searchMedicines(String text) {
+        List<Medicine> list = medicineRepositry.searchByNameOrBrand(text);
+        return FXCollections.observableArrayList(list);
+    }
 }
