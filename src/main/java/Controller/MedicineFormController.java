@@ -116,7 +116,7 @@ public class MedicineFormController implements Initializable {
 
     @FXML
     void OnBilling(MouseEvent event) {
-        //a
+        // Billing Form
     }
 
     private void navigate(String fxmlPath, String title) throws IOException {
