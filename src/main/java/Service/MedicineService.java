@@ -12,4 +12,5 @@ public interface MedicineService {
         ObservableList<Medicine> getAllMedicines();
         ObservableList<Medicine> getExpiringMedicines();
         String generateNewId();
+        ObservableList<Medicine> searchMedicines(String text);
 }

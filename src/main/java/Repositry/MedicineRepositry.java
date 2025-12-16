@@ -10,4 +10,5 @@ public interface MedicineRepositry {
     void deleteMedicine(String id);
     Medicine searchMedicine(String id);
     List<Medicine> getAllMedicine();
+    List<Medicine> searchByNameOrBrand(String text);
 }
