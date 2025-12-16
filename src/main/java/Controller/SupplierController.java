@@ -38,7 +38,13 @@ public class SupplierController {
 
     @FXML
     void OnAddNewSupplier(ActionEvent event) {
-
+        try {
+            Stage stages = (Stage) tblSupplier.getScene().getWindow();
+            stages.setScene(new Scene(FXMLLoader.load(getClass().getResource("/View/AddNewSupplier.fxml"))));
+            stages.setTitle("Add New Supplier");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
