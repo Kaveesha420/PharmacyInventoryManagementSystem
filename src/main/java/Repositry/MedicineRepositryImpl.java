@@ -63,4 +63,13 @@ public class MedicineRepositryImpl implements MedicineRepositry {
             return session.createQuery("FROM Medicine", Medicine.class).list();
         }
     }
+    @Override
+    public List<Medicine> searchByNameOrBrand(String text) {
+        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+            String hql = "FROM Medicine WHERE brandName LIKE :query OR genaricsName LIKE :query";
+            return session.createQuery(hql, Medicine.class)
+                    .setParameter("query", "%" + text + "%")
+                    .list();
+        }
+    }
 }
