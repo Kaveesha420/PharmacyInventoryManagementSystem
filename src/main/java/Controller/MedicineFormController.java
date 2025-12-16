@@ -84,7 +84,14 @@ public class MedicineFormController implements Initializable {
 
     @FXML
     void OnSearchDrug(KeyEvent event) {
-       //n
+        String searchText = txtSearch.getText();
+
+        if (searchText.isEmpty()) {
+            loadTableData();
+        } else {
+            ObservableList<Medicine> searchResult = service.searchMedicines(searchText);
+            tblMedicine.setItems(searchResult);
+        }
     }
 
     @FXML
@@ -118,4 +125,5 @@ public class MedicineFormController implements Initializable {
         stages.setTitle(title);
         stages.show();
     }
+
 }
