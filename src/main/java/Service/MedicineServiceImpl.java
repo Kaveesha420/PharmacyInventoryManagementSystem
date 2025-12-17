@@ -67,8 +67,6 @@ public class MedicineServiceImpl implements MedicineService{
             if (allMedicines.isEmpty()) {
                 return "M1";
             }
-
-            // Java Streams පාවිච්චි කරලා අංකය විතරක් අරන් Max එක හොයනවා
             int maxId = allMedicines.stream()
                     .map(m -> Integer.parseInt(m.getId().replace("M", "")))
                     .max(Integer::compareTo)
