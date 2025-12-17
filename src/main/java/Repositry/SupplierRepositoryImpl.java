@@ -24,7 +24,15 @@ public class SupplierRepositoryImpl implements SupplierRepository{
 
     @Override
     public void updateSupplier(Supplier supplier) {
-
+        Transaction transaction = null;
+        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+            transaction = session.beginTransaction();
+            session.merge(supplier);
+            transaction.commit();
+        }catch (Exception e){
+            if (transaction != null) transaction.rollback();
+            e.printStackTrace();
+        }
     }
 
     @Override
