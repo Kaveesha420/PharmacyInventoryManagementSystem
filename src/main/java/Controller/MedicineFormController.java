@@ -42,7 +42,7 @@ public class MedicineFormController implements Initializable {
     private TableColumn<?, ?> colGenaricName;
 
     @FXML
-    private TableColumn<?, ?> colId; // ID Column eka FXML eke thibuna nisa add kala
+    private TableColumn<?, ?> colId;
 
     @FXML
     private TableColumn<?, ?> colUnitPrice;

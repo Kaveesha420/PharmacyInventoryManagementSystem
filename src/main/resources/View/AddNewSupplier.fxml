@@ -17,9 +17,8 @@
             <Image url="@../Img/Screenshot%202025-12-17%20003441.png" />
          </image>
       </ImageView>
-      <JFXTextField fx:id="txtSupId" layoutX="86.0" layoutY="178.0" prefHeight="26.0" prefWidth="192.0" promptText="SUPPLIER ID" />
-      <JFXTextField fx:id="txtCompanyName" layoutX="462.0" layoutY="178.0" prefHeight="26.0" prefWidth="192.0" promptText="COMPANY NAME" />
-      <JFXTextField fx:id="txtContactPerson" layoutX="778.0" layoutY="178.0" prefHeight="26.0" prefWidth="192.0" promptText="CONTACT PERSON" />
+      <JFXTextField fx:id="txtCompanyName" layoutX="86.0" layoutY="178.0" prefHeight="26.0" prefWidth="192.0" promptText="COMPANY NAME" />
+      <JFXTextField fx:id="txtContactPerson" layoutX="460.0" layoutY="178.0" prefHeight="26.0" prefWidth="192.0" promptText="CONTACT PERSON" />
       <JFXTextField fx:id="txtPhone" layoutX="86.0" layoutY="236.0" prefHeight="26.0" prefWidth="192.0" promptText="PHONE" />
       <JFXTextField fx:id="txtEmail" layoutX="460.0" layoutY="236.0" prefHeight="26.0" prefWidth="192.0" promptText="EMAIL" />
       <JFXButton fx:id="btnAdd" layoutX="103.0" layoutY="291.0" onAction="#OnAdd" prefHeight="35.0" prefWidth="95.0" style="-fx-background-color: Green;" text="ADD" textFill="WHITE">
@@ -77,6 +76,6 @@
             <TableColumn fx:id="colAddress" prefWidth="179.9998779296875" text="ADDRESS" />
          </columns>
       </TableView>
-      <JFXTextField fx:id="txtAddress" layoutX="778.0" layoutY="236.0" prefHeight="26.0" prefWidth="192.0" promptText="ADDRESS" />
+      <JFXTextField fx:id="txtAddress" layoutX="772.0" layoutY="178.0" prefHeight="26.0" prefWidth="192.0" promptText="ADDRESS" />
    </children>
 </AnchorPane>

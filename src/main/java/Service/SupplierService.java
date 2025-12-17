@@ -8,4 +8,5 @@ public interface SupplierService {
     void updateSupplier(Supplier supplier);
     void deleteSupplier(String id);
     ObservableList<Supplier> getAllSupplier();
+    String genarateNewId();
 }

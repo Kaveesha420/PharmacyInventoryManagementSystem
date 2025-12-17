@@ -28,5 +28,23 @@ public class SupplierServiceImpl implements SupplierService{
         List<Supplier> list = supplierRepository.getAllSupplier();
         return FXCollections.observableArrayList(list);
     }
+    @Override
+    public String genarateNewId(){
+        try {
+            List<Supplier> suppliers = supplierRepository.getAllSupplier();
+            if (suppliers.isEmpty()) {
+                return "S1";
+            }
+            int maxId = suppliers.stream()
+                    .map(s -> Integer.parseInt(s.getId().replace("S", "")))
+                    .max(Integer::compareTo)
+                    .orElse(0);
+            return "S" + (maxId + 1);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "S1";
+        }
+    }
 
 }
