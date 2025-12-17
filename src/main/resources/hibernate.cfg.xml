@@ -16,6 +16,7 @@
         <property name="hbm2ddl.auto">update</property>
 
         <mapping class="model.entity.Medicine"/>
+        <mapping class="model.entity.Supplier"/>
 
     </session-factory>
 </hibernate-configuration>
