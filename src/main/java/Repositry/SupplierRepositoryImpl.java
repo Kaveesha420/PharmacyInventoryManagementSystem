@@ -53,6 +53,8 @@ public class SupplierRepositoryImpl implements SupplierRepository{
 
     @Override
     public List<Supplier> getAllSupplier() {
-        return List.of();
+        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+            return session.createQuery("FROM Supplier" , Supplier.class).list();
+        }
     }
 }
