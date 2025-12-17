@@ -37,7 +37,18 @@ public class SupplierRepositoryImpl implements SupplierRepository{
 
     @Override
     public void deleteSupplier(String id) {
-
+        Transaction transaction = null;
+        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+            transaction = session.beginTransaction();
+            Supplier supplier = session.find(Supplier.class , id);
+            if (supplier != null){
+                session.remove(supplier);
+            }
+            transaction.commit();
+        }catch (Exception e){
+            if (transaction != null) transaction.rollback();
+            e.printStackTrace();
+        }
     }
 
     @Override
