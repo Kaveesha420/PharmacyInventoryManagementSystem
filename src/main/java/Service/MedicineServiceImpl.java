@@ -65,18 +65,18 @@ public class MedicineServiceImpl implements MedicineService{
             List<Medicine> allMedicines = medicineRepositry.getAllMedicine();
 
             if (allMedicines.isEmpty()) {
-                return "M1";
+                return "M001";
             }
             int maxId = allMedicines.stream()
-                    .map(m -> Integer.parseInt(m.getId().replace("M", "")))
+                    .map(m -> Integer.parseInt(m.getId().replace("M0", "")))
                     .max(Integer::compareTo)
                     .orElse(0);
 
-            return "M" + (maxId + 1);
+            return "M0" + (maxId + 1);
 
         } catch (Exception e) {
             e.printStackTrace();
-            return "M1";
+            return "M001";
         }
     }
     @Override
@@ -84,7 +84,7 @@ public class MedicineServiceImpl implements MedicineService{
         List<Medicine> list = medicineRepositry.searchByNameOrBrand(text);
         return FXCollections.observableArrayList(list);
     }
-    
+
     @Override
     public double getTotalInventoryValue() {
         List<Medicine> allMedicines = medicineRepositry.getAllMedicine();

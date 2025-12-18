@@ -1,8 +1,7 @@
-package Controller;
+package controllers;
 
 import Service.SupplierService;
 import Service.SupplierServiceImpl;
-import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -26,18 +25,6 @@ public class AddNewSupplierController implements Initializable {
 
     private final SupplierService supplierService = new SupplierServiceImpl();
     private String selectSupplierId = null;
-
-    @FXML
-    private JFXButton btnAdd;
-
-    @FXML
-    private JFXButton btnClear;
-
-    @FXML
-    private JFXButton btnDelete;
-
-    @FXML
-    private JFXButton btnUpdate;
 
     @FXML
     private TableColumn<?, ?> colAddress;
@@ -97,7 +84,6 @@ public class AddNewSupplierController implements Initializable {
             OnClear(event);
 
         } catch (Exception e) {
-            showAlert(Alert.AlertType.ERROR, "Error", "Invalid Data Provided");
             e.printStackTrace();
         }
     }

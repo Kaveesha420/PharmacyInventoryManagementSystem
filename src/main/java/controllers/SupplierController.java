@@ -1,4 +1,4 @@
-package Controller;
+package controllers;
 
 import Service.SupplierService;
 import Service.SupplierServiceImpl;
