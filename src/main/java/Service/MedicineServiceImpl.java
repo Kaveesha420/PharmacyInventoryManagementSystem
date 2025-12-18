@@ -84,4 +84,25 @@ public class MedicineServiceImpl implements MedicineService{
         List<Medicine> list = medicineRepositry.searchByNameOrBrand(text);
         return FXCollections.observableArrayList(list);
     }
+    
+    @Override
+    public double getTotalInventoryValue() {
+        List<Medicine> allMedicines = medicineRepositry.getAllMedicine();
+        return allMedicines.stream()
+                .mapToDouble(m -> m.getUnitPrice() * m.getCurrentStock())
+                .sum();
+    }
+
+    @Override
+    public int getExpiringMedicineCount() {
+        return getExpiringMedicines().size();
+    }
+
+    @Override
+    public int getLowStockMedicineCount() {
+        List<Medicine> allMedicines = medicineRepositry.getAllMedicine();
+        return (int) allMedicines.stream()
+                .filter(m -> m.getCurrentStock() < 20)
+                .count();
+    }
 }

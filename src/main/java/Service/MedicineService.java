@@ -13,4 +13,7 @@ public interface MedicineService {
         ObservableList<Medicine> getExpiringMedicines();
         String generateNewId();
         ObservableList<Medicine> searchMedicines(String text);
+        double getTotalInventoryValue();
+        int getExpiringMedicineCount();
+        int getLowStockMedicineCount();
 }
