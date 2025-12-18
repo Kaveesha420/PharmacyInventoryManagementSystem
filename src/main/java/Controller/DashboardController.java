@@ -5,12 +5,27 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import javafx.scene.control.Label;
 
+import java.awt.*;
 import java.io.IOException;
 
 public class DashboardController {
 
     Stage stage = new Stage();
+
+    @FXML
+    private Label lblExpireSoon;
+
+    @FXML
+    private Label lblTodaySales;
+
+    @FXML
+    private Label lblTotalInventory;
+
+    @FXML
+    private Label lbllowStock;
+
 
     @FXML
     void OnAlerts(MouseEvent event) {
