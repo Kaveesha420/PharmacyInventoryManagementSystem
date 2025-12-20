@@ -1,4 +1,4 @@
-package controllers;
+package Controllers;
 
 import Service.SupplierService;
 import Service.SupplierServiceImpl;
@@ -62,8 +62,8 @@ public class SupplierController implements Initializable {
     }
 
     @FXML
-    void OnBilling(MouseEvent event) {
-        //
+    void OnBilling(MouseEvent event) throws IOException {
+        navigate("/View/BillingForm.fxml","Billing Form");
     }
 
     @FXML

@@ -1,4 +1,4 @@
-package controllers;
+package Controllers;
 
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -93,8 +93,8 @@ public class AletsController implements Initializable {
     }
 
     @FXML
-    void OnBilling(MouseEvent event) {
-        // Billing
+    void OnBilling(MouseEvent event) throws IOException {
+        navigate(event,"/View/BillingForm.fxml","Billing Form");
     }
 
     @FXML

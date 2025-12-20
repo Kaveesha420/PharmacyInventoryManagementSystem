@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="738.0" prefWidth="1030.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DashboardController">
+<AnchorPane prefHeight="738.0" prefWidth="1030.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.DashboardController">
    <children>
       <ImageView fitHeight="745.0" fitWidth="1136.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -48,7 +48,7 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Label fx:id="lblTodaySales" layoutX="853.0" layoutY="237.0" prefHeight="26.0" prefWidth="158.0">
+      <Label fx:id="lblTodaySales" layoutX="854.0" layoutY="237.0" prefHeight="35.0" prefWidth="113.0">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
