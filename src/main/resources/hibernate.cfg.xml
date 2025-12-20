@@ -17,6 +17,8 @@
 
         <mapping class="model.entity.Medicine"/>
         <mapping class="model.entity.Supplier"/>
+        <mapping class="model.entity.Order"/>
+        <mapping class="model.entity.OrderDetail"/>
 
     </session-factory>
 </hibernate-configuration>
