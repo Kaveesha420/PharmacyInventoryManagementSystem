@@ -33,17 +33,17 @@ public class SupplierServiceImpl implements SupplierService{
         try {
             List<Supplier> suppliers = supplierRepository.getAllSupplier();
             if (suppliers.isEmpty()) {
-                return "S1";
+                return "S001";
             }
             int maxId = suppliers.stream()
-                    .map(s -> Integer.parseInt(s.getId().replace("S", "")))
+                    .map(s -> Integer.parseInt(s.getId().replace("S0", "")))
                     .max(Integer::compareTo)
                     .orElse(0);
-            return "S" + (maxId + 1);
+            return "S0" + (maxId + 1);
 
         } catch (Exception e) {
             e.printStackTrace();
-            return "S1";
+            return "S001";
         }
     }
 
