@@ -62,8 +62,8 @@ public class SupplierController implements Initializable {
     }
 
     @FXML
-    void OnBilling(MouseEvent event) {
-        //
+    void OnBilling(MouseEvent event) throws IOException {
+        navigate("/View/BillingForm.fxml","Billing Form");
     }
 
     @FXML

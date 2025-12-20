@@ -191,7 +191,7 @@ public class AddDrugMedicineController implements Initializable {
     @FXML void OnMedicine(MouseEvent event) throws IOException { navigate("/View/MedicineForm.fxml", "Medicine"); }
     @FXML void OnAlerts(MouseEvent event) throws IOException { navigate("/View/AletsForm.fxml", "Alerts"); }
     @FXML void OnSuppliers(MouseEvent event) throws IOException { navigate("/View/SupplierForm.fxml", "Suppliers"); }
-    @FXML void OnBilling(MouseEvent event) {}
+    @FXML void OnBilling(MouseEvent event) throws IOException {navigate("/View/BillingForm.fxml","Billing Form");}
 
     private void navigate(String fxmlPath, String title) throws IOException {
         Stage stage = (Stage) btnAdd.getScene().getWindow();
