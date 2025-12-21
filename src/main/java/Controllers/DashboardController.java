@@ -1,5 +1,6 @@
 package Controllers;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -75,5 +76,21 @@ public class DashboardController implements Initializable {
         stage.setScene(new Scene(FXMLLoader.load(getClass().getResource(fxmlPath))));
         stage.setTitle(title);
         stage.show();
+    }
+
+
+    public void OnLogout(ActionEvent actionEvent) {
+        try {
+            Stage currentStage = (Stage) ((javafx.scene.Node) actionEvent.getSource()).getScene().getWindow();
+            currentStage.close();
+
+            Stage loginStage = new Stage();
+            loginStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/View/LoginForm.fxml"))));
+            loginStage.setTitle("Login_Form");
+            loginStage.show();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

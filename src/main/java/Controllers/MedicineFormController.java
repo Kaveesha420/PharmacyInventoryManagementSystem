@@ -126,4 +126,19 @@ public class MedicineFormController implements Initializable {
         stages.show();
     }
 
+    public void OnLogout(ActionEvent actionEvent) {
+
+        try {
+            Stage currentStage = (Stage) ((javafx.scene.Node) actionEvent.getSource()).getScene().getWindow();
+            currentStage.close();
+
+            Stage loginStage = new Stage();
+            loginStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/View/LoginForm.fxml"))));
+            loginStage.setTitle("Login_Form");
+            loginStage.show();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

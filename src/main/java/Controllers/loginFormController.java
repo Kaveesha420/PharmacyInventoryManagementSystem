@@ -26,6 +26,9 @@ public class loginFormController {
 
         if ("admin".equals(name) && "1234".equals(password)){
             try {
+                Stage currentStage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+                currentStage.close();
+
                 stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/View/DashboardForm.fxml"))));
             } catch (IOException e) {
                 throw new RuntimeException(e);
