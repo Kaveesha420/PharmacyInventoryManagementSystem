@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -7,7 +8,6 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane prefHeight="751.0" prefWidth="1013.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AletsController">
    <children>
@@ -51,5 +51,10 @@
             <TableColumn fx:id="colUnitPrice" prefWidth="151.20001220703125" text="DAYS REMAINING" />
          </columns>
       </TableView>
+      <JFXButton layoutX="970.0" layoutY="20.0" onAction="#OnLogout" prefHeight="30.0" prefWidth="81.0" style="-fx-background-color: orange;" text="Log out" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>
