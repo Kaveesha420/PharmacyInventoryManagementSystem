@@ -22,27 +22,27 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </JFXButton>
-      <Label layoutX="199.0" layoutY="20.0" onMouseClicked="#OnDashbord" prefHeight="19.0" prefWidth="73.0" text="Dashboard" textFill="WHITE">
+      <Label layoutX="199.0" layoutY="29.0" onMouseClicked="#OnDashbord" prefHeight="19.0" prefWidth="73.0" text="Dashboard" textFill="WHITE">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="306.0" layoutY="20.0" onMouseClicked="#OnMedicine" prefHeight="19.0" prefWidth="73.0" text="Medicine" textFill="WHITE">
+      <Label layoutX="304.0" layoutY="29.0" onMouseClicked="#OnMedicine" prefHeight="19.0" prefWidth="73.0" text="Medicine" textFill="WHITE">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="405.0" layoutY="20.0" onMouseClicked="#OnAlerts" prefHeight="19.0" prefWidth="73.0" text="Alerts" textFill="WHITE">
+      <Label layoutX="399.0" layoutY="29.0" onMouseClicked="#OnAlerts" prefHeight="19.0" prefWidth="73.0" text="Alerts" textFill="WHITE">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="496.0" layoutY="20.0" onMouseClicked="#OnSuppliers" prefHeight="19.0" prefWidth="73.0" text="Suppliers" textFill="WHITE">
+      <Label layoutX="478.0" layoutY="29.0" onMouseClicked="#OnSuppliers" prefHeight="19.0" prefWidth="62.0" text="Suppliers" textFill="WHITE">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="605.0" layoutY="20.0" onMouseClicked="#OnBilling" prefHeight="19.0" prefWidth="73.0" text="Billing" textFill="WHITE">
+      <Label layoutX="590.0" layoutY="29.0" onMouseClicked="#OnBilling" prefHeight="19.0" prefWidth="54.0" text="Billing" textFill="WHITE">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
